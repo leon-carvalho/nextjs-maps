@@ -1,6 +1,6 @@
 {
-  "name": "NextJS - Boilerplate",
-  "short_name": "NextJS Boilerplate",
+  "name": "NextJS - Maps",
+  "short_name": "NextJS Maps",
   "icons": [
     {
       "src": "/img/icon-192.png",
@@ -14,7 +14,7 @@
     }
   ],
   "background_color": "#06092B",
-  "description": "Boilerlate utilizando Typescript, React, NextJS, Styled Components, Jest e Testing Library!",
+  "description": "A simple study project to practice NextJS, Leaflet and GraphQL",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#06092B"
