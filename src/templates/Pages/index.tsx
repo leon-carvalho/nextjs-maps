@@ -3,7 +3,7 @@ import LinkWrapper from 'components/LinkWrapper'
 
 import * as S from './styles'
 
-const PagesTemplate = (): JSX.Element => {
+const PageTemplate = (): JSX.Element => {
   return (
     <S.Content>
       <LinkWrapper href="/">
@@ -24,4 +24,4 @@ const PagesTemplate = (): JSX.Element => {
   )
 }
 
-export default PagesTemplate
+export default PageTemplate

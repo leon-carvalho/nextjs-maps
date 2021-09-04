@@ -1,9 +1,9 @@
 import client from 'graphql/client'
 import { GET_PAGES } from 'graphql/queries'
-import PagesTemplate from 'templates/About'
+import PageTemplate from 'templates/About'
 
 export default function AboutPage(): JSX.Element {
-  return <PagesTemplate />
+  return <PageTemplate />
 }
 
 export const getStaticProps = async () => {
