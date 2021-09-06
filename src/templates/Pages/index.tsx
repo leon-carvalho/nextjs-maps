@@ -3,22 +3,22 @@ import LinkWrapper from 'components/LinkWrapper'
 
 import * as S from './styles'
 
-const PageTemplate = (): JSX.Element => {
+export type PageTemplateProps = {
+  heading: string
+  body: string
+}
+
+const PageTemplate = ({ heading, body }: PageTemplateProps): JSX.Element => {
   return (
     <S.Content>
       <LinkWrapper href="/">
         <CloseOutline size={32} aria-label="fechar" />
       </LinkWrapper>
 
-      <S.Heading>My trips</S.Heading>
+      <S.Heading>{heading}</S.Heading>
 
       <S.Body>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum
-          iste doloribus minus, ullam natus nostrum ab voluptatum sint dolore
-          sit necessitatibus officia. Molestiae, tenetur perspiciatis fugit quas
-          dolorum officiis?
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: body }} />
       </S.Body>
     </S.Content>
   )
