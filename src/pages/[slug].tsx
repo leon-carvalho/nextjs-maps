@@ -4,7 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import PageTemplate from 'templates/Pages'
 
-export default function About(): JSX.Element {
+export default function Page(): JSX.Element {
   const router = useRouter()
 
   if (router.isFallback) return <small>Loading...</small>
