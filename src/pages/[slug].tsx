@@ -4,12 +4,12 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import PageTemplate from 'templates/Pages'
 
-export default function Page(): JSX.Element {
+export default function Page({ heading, body }): JSX.Element {
   const router = useRouter()
 
   if (router.isFallback) return <small>Loading...</small>
 
-  return <PageTemplate />
+  return <PageTemplate heading={heading} body={body} />
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -25,8 +25,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const page = await client.request(GET_PAGE_BY_SLUG, {
-    slug: params?.slug
+  const { page } = await client.request(GET_PAGE_BY_SLUG, {
+    slug: `${params?.slug}`
   })
 
   if (!page) return { notFound: true }
