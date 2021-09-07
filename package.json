@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test --watch",
-    "codegen": "graphql-codegen --config codegen.yml"
+    "codegen": "DOTENV_CONFIG_PATH=./.env.local graphql-codegen -r dotenv/config --config codegen.yml"
   },
   "dependencies": {
     "@styled-icons/evaicons-outline": "^10.34.0",
