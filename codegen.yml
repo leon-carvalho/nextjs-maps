@@ -1,0 +1,10 @@
+overwrite: true
+schema: ${GRAPHQL_HOST}
+documents: "src/graphql/queries.ts"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - add:
+          content: '/* eslint-disable */'
